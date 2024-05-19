@@ -16,7 +16,7 @@ Um workflow do GitHub Actions tem processos definidos, como:
 
 AWS CloudFormation permite a criação e configuração de infraestrutura na AWS usando templates de código. Isso garante consistência, automação, e gerenciamento simplificado de recursos. O template que está sendo utilizado no projeto está dessa forma:
 
-`
+```yaml
 resource "aws_instance" "web" {
   ami                    = "ami-057f57c2fcd14e5f4"
   instance_type          = "t2.micro"
@@ -34,7 +34,7 @@ resource "aws_instance" "web" {
     Name = "WebServer"
   }
 }
-`
+```
 
 ### TEMA 4
 
