@@ -40,8 +40,12 @@ Esses template de AWS CloudFormation define a infraestrutura em código para cri
 
 A integração de GitHub Actions com AWS CloudFormation e Amazon EC2 permite automação completa do deploy da nossa aplicação. Com a implementação da criação de pipelines CI/CD que automatizam a construção, teste, e deploy de aplicações, todo o desenvolvimento se torna mais fácil e ágil.
 
-Desafios Encontrados:
-- Gerenciamento de Credenciais: Utilização do GitHub Secrets para armazenar credenciais de forma segura.
-- Sincronização de Estados: Implementar verificações de integridade e rollback automáticos, utilizando o s3.
+Ao aplicar essa integração em projetos reais, é possível obter um fluxo de trabalho contínuo e ininterrupto, onde cada alteração no código é automaticamente testada, construída e implantada em um ambiente de produção ou de teste. Isso permite a identificação e correção de problemas rapidamente, além de garantir que o código em produção esteja sempre atualizado e funcional.
 
-Esses desafios estavam relacionados a pouco conhecimento técnico do assunto, porém utilizando a documentação das plataformas, foi possível contornar os desafios.
+Desafios Encontrados:
+- Gerenciamento de Credenciais: O armazenamento de credenciais de forma segura, evitando exposição de informações sensíveis foi um desafio a ser superado, solucionamos utilizando o GitHub Secrets para armazenar chaves de acesso AWS de forma segura.
+- Sincronização de Estados: Garantir que a infraestrutura esteja sempre em um estado consistente, mesmo em caso de falhas durante o deploy foi um desafio e foi solucionada com a implementação de verificações de integridade e mecanismos de rollback automáticos utilizando AWS S3 para armazenar o estado da infraestrutura.
+
+Esses desafios foram inicialmente complicados devido ao pouco conhecimento técnico sobre as ferramentas. Porém utilizando a documentação das plataformas, foi possível contornar os desafios.
+
+Então, a integração de GitHub Actions com AWS CloudFormation e Amazon EC2 não apenas automatiza o processo de deploy, mas também aumenta a confiabilidade e a eficiência do desenvolvimento de software.
