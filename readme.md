@@ -12,6 +12,8 @@ Um workflow do GitHub Actions tem processos definidos, como:
 - As Secrets: São usadas para armazenar valores como chaves de acesso, região das instâncias, etc.
 - As Actions: São tarefas reutilizáveis que realizam ações específicas, como executar comandos, configurar ambientes ou interagir com serviços externos.
 
+O GitHub Actions oferece uma plataforma poderosa para automação de workflows, permitindo que tarefas sejam definidas e executadas diretamente nos repositórios GitHub. Um workflow é um conjunto de instruções definidas em arquivos YAML que detalham as etapas a serem seguidas durante eventos específicos. Os eventos (events) que disparam esses workflows podem ser pushs, pull requests ou cron schedules. As secrets são usadas para armazenar informações sensíveis, como chaves de acesso e credenciais, garantindo a segurança durante a execução dos workflows. As actions são componentes reutilizáveis que realizam tarefas específicas, como executar comandos de shell, configurar ambientes ou interagir com serviços externos, permitindo que workflows sejam montados de forma modular e eficiente.
+
 ### TEMA 3
 
 AWS CloudFormation permite a criação e configuração de infraestrutura na AWS usando templates de código. Isso garante consistência, automação, e gerenciamento simplificado de recursos. O template que está sendo utilizado no projeto está dessa forma:
@@ -46,6 +48,4 @@ Desafios Encontrados:
 - Gerenciamento de Credenciais: O armazenamento de credenciais de forma segura, evitando exposição de informações sensíveis foi um desafio a ser superado, solucionamos utilizando o GitHub Secrets para armazenar chaves de acesso AWS de forma segura.
 - Sincronização de Estados: Garantir que a infraestrutura esteja sempre em um estado consistente, mesmo em caso de falhas durante o deploy foi um desafio e foi solucionada com a implementação de verificações de integridade e mecanismos de rollback automáticos utilizando AWS S3 para armazenar o estado da infraestrutura.
 
-Esses desafios foram inicialmente complicados devido ao pouco conhecimento técnico sobre as ferramentas. Porém utilizando a documentação das plataformas, foi possível contornar os desafios.
-
-Então, a integração de GitHub Actions com AWS CloudFormation e Amazon EC2 não apenas automatiza o processo de deploy, mas também aumenta a confiabilidade e a eficiência do desenvolvimento de software.
+Esses desafios estavam relacionados a pouco conhecimento técnico do assunto, porém utilizando a documentação detalhada das plataformas, foi possível contornar os desafios.
